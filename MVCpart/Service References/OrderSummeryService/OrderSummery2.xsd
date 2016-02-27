@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Order_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Version_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Person" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Price_Normal_Rental" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Member_Rental" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Normal_Catch" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Member_Catch" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Over" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Riding" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Over_Riding" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Deposit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_BaseKM" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_IMG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Brand_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand_IMG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Type_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Shop_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="City_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Province_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Province_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Action_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Action_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Client_UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_LoweredUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_MobileAlias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_Validaton" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_RealName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_Adress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client_RoleID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Client_RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff_ID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Staff_UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff_LoweredUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff_MobileAlias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff_Validation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff_RealName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff_Adress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Start_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order_End_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order_Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order_IsCatch" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RentalType_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="RentalType_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Checkout_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checkout_KM" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Mark" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Order_ViewModel" nillable="true" type="tns:Order_ViewModel" />
+  <xs:complexType name="ArrayOfOrder_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Order_ViewModel" nillable="true" type="tns:Order_ViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrder_ViewModel" nillable="true" type="tns:ArrayOfOrder_ViewModel" />
+</xs:schema>

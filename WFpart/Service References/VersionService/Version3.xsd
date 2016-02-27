@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/CarRental/Version.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Car_Version">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Version_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Person" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Type" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Brand" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Shop" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Price_Normal_Rental" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Member_Rental" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Normal_Catch" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Member_Catch" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Over" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Riding" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Over_Riding" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Deposit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_IMG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_BaseKM" type="xs:int" />
+      <xs:element minOccurs="0" name="Car_Order" nillable="true" type="tns:ArrayOfCar_Order">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Version" nillable="true" type="tns:Car_Version" />
+  <xs:complexType name="ArrayOfCar_Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Order" nillable="true" type="tns:Car_Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Order" nillable="true" type="tns:ArrayOfCar_Order" />
+  <xs:complexType name="Car_Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Order_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_User" type="ser:guid" />
+      <xs:element minOccurs="0" name="Order_Shop" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Version" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_RentalType" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Start_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order_End_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order_Action" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order_IsCatch" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Order_DepositPay" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Car_Checkout" nillable="true" type="tns:ArrayOfCar_Checkout">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Order" nillable="true" type="tns:Car_Order" />
+  <xs:complexType name="ArrayOfCar_Checkout">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Checkout" nillable="true" type="tns:Car_Checkout" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Checkout" nillable="true" type="tns:ArrayOfCar_Checkout" />
+  <xs:complexType name="Car_Checkout">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checkout_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Order" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_User" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Checkout_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checkout_KM" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Mark" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Checkout" nillable="true" type="tns:Car_Checkout" />
+  <xs:complexType name="ArrayOfCar_Version">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Version" nillable="true" type="tns:Car_Version" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Version" nillable="true" type="tns:ArrayOfCar_Version" />
+</xs:schema>

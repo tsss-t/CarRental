@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFpart" />
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="SelectOrderSummery_OrderID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummery_OrderIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectOrderSummery_OrderIDResult" nillable="true" type="q1:Order_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrice_Order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="Summery" nillable="true" type="q2:Order_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrice_OrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPrice_OrderResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrice_OrderID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrice_OrderIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPrice_OrderIDResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pay_Order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pay_OrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pay_OrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastCheakOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StaffName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+        <xs:element minOccurs="0" name="KM" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastCheakOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LastCheakOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummery_ClientName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummery_ClientNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectOrderSummery_ClientNameResult" nillable="true" type="q3:ArrayOfOrder_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummery_StaffName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StaffName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummery_StaffNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectOrderSummery_StaffNameResult" nillable="true" type="q4:ArrayOfOrder_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummerys_CarVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VersionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummerys_CarVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectOrderSummerys_CarVersionResult" nillable="true" type="q5:ArrayOfOrder_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummerys_ShopID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShopID" type="xs:int" />
+        <xs:element minOccurs="0" name="year" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="month" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummerys_ShopIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectOrderSummerys_ShopIDResult" nillable="true" type="q6:ArrayOfOrder_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummerys_Time">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Year" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="Month" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="Day" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="Ispay" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOrderSummerys_TimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectOrderSummerys_TimeResult" nillable="true" type="q7:ArrayOfOrder_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRentaledCarCount_TimeAndVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShopID" type="xs:int" />
+        <xs:element minOccurs="0" name="VersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="StartYear" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="StartMonth" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="StartDay" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndYear" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndMonth" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndDay" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRentaledCarCount_TimeAndVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectRentaledCarCount_TimeAndVersionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Order_Cancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="UID" type="q8:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Order_CancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Order_CancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

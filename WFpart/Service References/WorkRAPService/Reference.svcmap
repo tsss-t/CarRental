@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="995cf4f1-bc7a-448b-a531-169559d9cd62" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/Personnel/WorkRAP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WorkRAP.xsd" MetadataType="Schema" ID="32c8f60b-c2bf-4616-a048-863958acf40a" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/WorkRAP.svc?xsd=xsd3" />
+    <MetadataFile FileName="WorkRAP1.xsd" MetadataType="Schema" ID="5694ef76-6bb3-41ec-abfe-20c7e3eabf72" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/WorkRAP.svc?xsd=xsd1" />
+    <MetadataFile FileName="WorkRAP.disco" MetadataType="Disco" ID="1540b0ba-e427-40e0-97b4-edcb097cdfbe" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/WorkRAP.svc?disco" />
+    <MetadataFile FileName="WorkRAP2.xsd" MetadataType="Schema" ID="9af2e5e0-fddd-4da6-a08f-ff4431de63f6" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/WorkRAP.svc?xsd=xsd2" />
+    <MetadataFile FileName="WorkRAP.wsdl" MetadataType="Wsdl" ID="004bfc27-a91d-47eb-9a9a-731865e6d2cb" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/WorkRAP.svc?wsdl" />
+    <MetadataFile FileName="WorkRAP3.xsd" MetadataType="Schema" ID="0300e3e6-9912-4acd-b91a-432aa9091922" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/WorkRAP.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

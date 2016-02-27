@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WCFpart.SOA.Function.SalaryAppend" CodeBehind="SalaryAppend.svc.cs" %>

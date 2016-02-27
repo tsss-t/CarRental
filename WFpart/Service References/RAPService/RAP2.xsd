@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/Personnel/RAP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="User_RAP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RAP_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="RAP_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RAP_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="User_WorkRAP" nillable="true" type="tns:User_WorkRAP">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User_RAP" nillable="true" type="tns:User_RAP" />
+  <xs:complexType name="User_WorkRAP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WorkRAP_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkRAP_User" type="ser:guid" />
+      <xs:element minOccurs="0" name="WorkRAP_Type" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkRAP_Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User_WorkRAP" nillable="true" type="tns:User_WorkRAP" />
+  <xs:complexType name="ArrayOfUser_RAP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User_RAP" nillable="true" type="tns:User_RAP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser_RAP" nillable="true" type="tns:ArrayOfUser_RAP" />
+</xs:schema>

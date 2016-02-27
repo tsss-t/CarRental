@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.6.2.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                }
+                catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj, vrl) {
+            try {
+                obj.style.behavior = 'url(#default#homepage)'; obj.setHomePage(vrl);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    }
+                    catch (e) {
+                        alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将[signed.applets.codebase_principal_support]设置为'true'");
+                    }
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                    prefs.setCharPref('browser.startup.homepage', vrl);
+                }
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="JSContent" runat="server" />
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="logindisplay">
+                <div id="logindisplayleft">
+                    <a onclick="AddFavorite(window.location,document.title)" style="cursor:hand">加入收藏</a> 
+                    |<a onclick="SetHome(this,window.location)" style="cursor:hand">设为首页</a></div>
+                <div id="logindisplayright">
+                    <%Html.RenderPartial("LogOnUserControl"); %>
+                    | 在线租车 | 帮助中心 |投诉中心 | 网站导航
+                </div>
+            </div>
+            <div id="logo" style="height: 140px;">
+                <img src="/Images/8796376.gif" style="height: 140px; width: 100%" alt="四通租车" />
+            </div>
+            <div id="menucontainer">
+                <div id="menuButtons">
+                    <a href="<%= Url.Action("Index", "Home") %>">
+                        <div class="menuButton">
+                            &nbsp;&nbsp;首&nbsp;&nbsp;&nbsp;&nbsp;页
+                        </div>
+                </a><a href="<%=Url.Action("SelectArea","Car") %>">
+                    <div class="menuButton">
+                        车型查询
+                    </div>
+                </a><a href="#">
+                    <div class="menuButton">
+                        预约租车
+                    </div>
+                </a><a href="#">
+                    <div class="menuButton">
+                        营业网点
+                    </div>
+                </a><a href="#">
+                    <div class="menuButton">
+                        举行活动
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    <div id="footer">
+        <div id="footerIMG">
+            <img src="/Images/LogoS.jpg" height="65px" />
+        </div>
+        <div id="footerFont">
+            成都租车电话：028-6203XXXX 028-8515XXXX 028-8515XXXX<br />
+            四通成都租车公司 www.cdsitong.com 成都取车地址：成都市XX区XX路2号XXXXXX大厦X楼X座<br />
+            搜索关键字：成都四通租车 成都租车 成都租车公司 成都汽车租赁公司 成都商务租车 成都旅游租车<br />
+        </div>
+    </div>
+    </div>
+</body>
+</html>

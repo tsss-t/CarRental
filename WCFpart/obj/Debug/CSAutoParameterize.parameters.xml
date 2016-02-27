@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Models.Properties.Settings.CarRentalConnectionString-Web.config Connection String" description="Models.Properties.Settings.CarRentalConnectionString 应用程序在 web.config 中用来访问数据库的连接字符串。" defaultvalue="Data Source=.;Initial Catalog=CarRental;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator\\Documents\\Visual\ Studio\ 2010\\WebSites\\CarRental\\WCFpart\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Models.Properties.Settings.CarRentalConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="CarRentalConnectionString-Web.config Connection String" description="CarRentalConnectionString 应用程序在 web.config 中用来访问数据库的连接字符串。" defaultvalue="Data Source=.;Initial Catalog=CarRental;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator\\Documents\\Visual\ Studio\ 2010\\WebSites\\CarRental\\WCFpart\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CarRentalConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

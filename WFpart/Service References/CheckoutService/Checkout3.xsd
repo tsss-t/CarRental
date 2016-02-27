@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/CarRental/Checkout.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Car_Checkout">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checkout_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Order" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_User" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Checkout_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checkout_KM" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Mark" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Checkout" nillable="true" type="tns:Car_Checkout" />
+  <xs:complexType name="ArrayOfCar_Checkout">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Checkout" nillable="true" type="tns:Car_Checkout" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Checkout" nillable="true" type="tns:ArrayOfCar_Checkout" />
+</xs:schema>

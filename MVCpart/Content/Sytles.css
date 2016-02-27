@@ -1,0 +1,191 @@
+﻿body
+{
+}
+#Main
+{
+    margin-top: 10px;
+}
+.youhui
+{
+    float: left;
+    width: 260px;
+    height: 400px;
+    border-bottom: 10px solid #FBEBB8;
+    border-left: 10px solid #FBEBB8;
+    border-right: 10px solid #FBEBB8;
+}
+.youhui ul li
+{
+    margin-top: 5px;
+}
+.ShowImg
+{
+    float: left;
+    margin-left: 20px;
+}
+.ImgInfo
+{
+    height: 20px;
+    opacity: 0.6;
+    background-color: Black;
+    position: relative;
+    top: 245px;
+    color: White;
+}
+.Img
+{
+    border: 1px solid #CCCCCC;
+    background-image: url("/Images/1.jpg");
+    width: 398px;
+    height: 266px;
+    position: absolute;
+}
+.ImgInfo_btn
+{
+    float: right;
+    margin-top: 1px;
+    width: 100px;
+    list-style-type: none;
+}
+.ImgInfo_btn li
+{
+    cursor: pointer;
+    float: left;
+    width: 12px;
+    height: 17px;
+    background-color: White;
+    margin-left: 7px;
+    color: Black;
+    text-align: center;
+}
+.ImgInfo_btn li:hover
+{
+    background-color: #FF7D01;
+    color: White;
+}
+#highLight
+{
+    background-color: #FF7D01;
+    color: White;
+}
+#News
+{
+    width: 398px;
+    border: 1px solid #FFE1C5;
+    height: 130px;
+    margin-top: 280px;
+}
+.right
+{
+    float: right;
+    color: #8E8E8E;
+}
+#News_Title
+{
+    height: 23px;
+    font-weight: bold;
+    background: url("/Images/bg04.gif") repeat-x 0 0;
+    text-indent: 5px;
+}
+#Phone
+{
+    float: right;
+    height: 250px;
+    margin-left: 10px;
+}
+#Record
+{
+    margin-top: 10px;
+}
+.Record_Title_Content
+{
+    margin-left: 9px;
+}
+#Record_Title
+{
+    background: url("/Images/p11.gif") repeat-x 0 0;
+    height: 43px;
+    line-height: 35px;
+    color: #768B9C;
+}
+.Record_Content_Content
+{
+    margin-left: 17px;
+}
+#Record_Content_ul
+{
+    list-style-type: none;
+}
+#Record_Content_ul li
+{
+    float: left;
+    width: 40px;
+    margin-left: 2px;
+}
+.Record_Content_Style
+{
+    height: 23px;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #CCCCCC;
+}
+.HotCar
+{
+    border: 1px solid red;
+    height: 300px;
+    width: 700px;
+    float: left;
+    margin-top: 10px;
+}
+.Help
+{
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 180px;
+    width: 260px;
+    border: 1px solid #D6D6D6;
+    float: right;
+}
+.left
+{
+    float: left;
+    background-image: url("/Images/p14.gif");
+    width: 122px;
+    height: 30px;
+    font-weight: bold;
+    text-indent: 10px;
+    line-height: 30px;
+}
+.Help_more
+{
+    float: left;
+    background: url("/Images/bg07.gif") repeat-x 0 0;
+    width: 135px;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+}
+.News_ul li
+{
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #CCCCCC;
+ font-size:12px;
+    list-style-type:none;
+}
+.News_ul li a
+{
+     color:Black;
+    }
+    
+
+      .youhui_Header img
+      {
+      border-width:0px;    
+      }
+      #News_Title img
+      {
+      border-width:0px;    
+      }
+      
+      

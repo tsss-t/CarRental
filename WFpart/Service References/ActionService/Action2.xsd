@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/CarRental/Action.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Car_Action">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Action_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Action_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Car_Order" nillable="true" type="tns:ArrayOfCar_Order">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Action" nillable="true" type="tns:Car_Action" />
+  <xs:complexType name="ArrayOfCar_Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Order" nillable="true" type="tns:Car_Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Order" nillable="true" type="tns:ArrayOfCar_Order" />
+  <xs:complexType name="Car_Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Order_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_User" type="ser:guid" />
+      <xs:element minOccurs="0" name="Order_Shop" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Version" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_RentalType" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Start_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order_End_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order_Action" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order_IsCatch" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Order_DepositPay" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Car_Checkout" nillable="true" type="tns:ArrayOfCar_Checkout">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Order" nillable="true" type="tns:Car_Order" />
+  <xs:complexType name="ArrayOfCar_Checkout">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Checkout" nillable="true" type="tns:Car_Checkout" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Checkout" nillable="true" type="tns:ArrayOfCar_Checkout" />
+  <xs:complexType name="Car_Checkout">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checkout_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Order" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_User" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Checkout_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checkout_KM" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Mark" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Checkout" nillable="true" type="tns:Car_Checkout" />
+  <xs:complexType name="ArrayOfCar_Action">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Action" nillable="true" type="tns:Car_Action" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Action" nillable="true" type="tns:ArrayOfCar_Action" />
+</xs:schema>

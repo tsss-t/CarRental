@@ -1,0 +1,74 @@
+﻿body
+{
+    font-family: 微软雅黑;
+}
+.OutBox
+{
+    width: 100%;
+}
+.RegBox
+{
+    width: 90%;
+    height: auto;
+    clear: both;
+    margin: 10px auto auto auto;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.RegTabel
+{
+    width: 85%;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+    overflow: auto;
+    height: 1%;
+}
+.RegTabel .RegInfo
+{
+    float: left;
+    margin: 0px 20px;
+}
+.RegTabel .RegInfo fieldset
+{
+    padding: 0px auto 30px auto;
+    width: 95%;
+}
+.RegInfo .RegFrom
+{
+    padding: 10px 50px;
+}
+input
+{
+    width: 200px;
+    height: 20px;
+    font-family: 微软雅黑;
+}
+.editor-label
+{
+    line-height: 25px;
+}
+
+.RegList
+{
+    width: 80%;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+    overflow: auto;
+    height: 1%;
+}
+.RegList textarea
+{
+    width: 94%; height: 280px; margin: 0px 20px;
+}
+.Error
+{
+    color:Red;
+    float:right;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="672fc227-a12c-4882-b512-c220b33a801e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/Personnel/Salary.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Salary.wsdl" MetadataType="Wsdl" ID="dbacc9fe-0600-4e7f-a7e1-7b915393210d" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/Salary.svc?wsdl" />
+    <MetadataFile FileName="Salary.disco" MetadataType="Disco" ID="002cf449-8626-40e5-8301-22c550991de0" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/Salary.svc?disco" />
+    <MetadataFile FileName="Salary.xsd" MetadataType="Schema" ID="c7eb8627-2226-473a-8f19-20d9b25341fc" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/Salary.svc?xsd=xsd0" />
+    <MetadataFile FileName="Salary1.xsd" MetadataType="Schema" ID="457258c2-7a16-4d7c-8ead-b57896ab4b03" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/Salary.svc?xsd=xsd1" />
+    <MetadataFile FileName="Salary2.xsd" MetadataType="Schema" ID="0e98edb8-e2fb-4d25-a4c1-6757db850191" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/Salary.svc?xsd=xsd2" />
+    <MetadataFile FileName="Salary3.xsd" MetadataType="Schema" ID="fbe0a9a3-0195-49f6-b27a-5dd4b4ddefe2" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/Salary.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

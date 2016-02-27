@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/Synthesize/CarSummery.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFpart" />
+  <xs:element name="SelectAllCar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectAllCarResult" nillable="true" type="q1:ArrayOfCar_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCarCount_ShopIDAndTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShopID" type="xs:int" />
+        <xs:element minOccurs="0" name="VersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="StartYear" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="StartMonth" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="StartDay" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndYear" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndMonth" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndDay" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCarCount_ShopIDAndTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectCarCount_ShopIDAndTimeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectHasCar_CityIDAndTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CityID" type="xs:int" />
+        <xs:element minOccurs="0" name="VersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="CarCount" type="xs:int" />
+        <xs:element minOccurs="0" name="StartYear" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="StartMonth" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="StartDay" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndYear" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndMonth" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="EndDay" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectHasCar_CityIDAndTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectHasCar_CityIDAndTimeResult" nillable="true" type="q2:ArrayOfCar_Shop" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCarInfo_Price">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShopID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="StartPrice" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="EndPrice" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="CarTypeID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="BrandID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCarInfo_PriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFpart" minOccurs="0" name="SelectCarInfo_PriceResult" nillable="true" type="q3:ArrayOfCar_ViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

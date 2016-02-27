@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="200da445-74c0-4d84-b68d-60c4074faa70" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/Synthesize/UserSummery.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserSummery.xsd" MetadataType="Schema" ID="697ee30c-fb7b-441b-bbb3-0b27a180edc3" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/UserSummery.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserSummery1.xsd" MetadataType="Schema" ID="7b6346e6-8a0e-4ec7-ac45-54b1d6137bbc" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/UserSummery.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserSummery2.xsd" MetadataType="Schema" ID="89f079bb-2549-4731-9f6c-ebe498e9b2d1" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/UserSummery.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserSummery.disco" MetadataType="Disco" ID="d8d86d5c-c9b5-4eee-a1fe-544cffe3e898" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/UserSummery.svc?disco" />
+    <MetadataFile FileName="UserSummery3.xsd" MetadataType="Schema" ID="69b541d3-9847-4ed0-adc5-f14d5d1934b0" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/UserSummery.svc?xsd=xsd3" />
+    <MetadataFile FileName="UserSummery.wsdl" MetadataType="Wsdl" ID="2620ed70-4d00-4d28-9774-a8f52c05b4f2" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/UserSummery.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

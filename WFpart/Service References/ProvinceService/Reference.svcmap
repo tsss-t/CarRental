@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="87268cb6-e39f-44cd-b6c8-b4e290879f5e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/CarRental/Province.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Province.wsdl" MetadataType="Wsdl" ID="0c9eebf1-e179-428e-9f01-38151aa387d0" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Province.svc?wsdl" />
+    <MetadataFile FileName="Province.xsd" MetadataType="Schema" ID="79072a09-1cd9-4d07-b6ee-daca62a70ba1" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Province.svc?xsd=xsd0" />
+    <MetadataFile FileName="Province1.xsd" MetadataType="Schema" ID="2d04a124-880a-4013-bba8-558a9fe2bc84" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Province.svc?xsd=xsd1" />
+    <MetadataFile FileName="Province2.xsd" MetadataType="Schema" ID="31aa878d-98f5-4a3b-bba0-a67122fbd23c" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Province.svc?xsd=xsd2" />
+    <MetadataFile FileName="Province3.xsd" MetadataType="Schema" ID="fa02304e-7f3f-48e5-a5e0-84a2fda51e62" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Province.svc?xsd=xsd3" />
+    <MetadataFile FileName="Province.disco" MetadataType="Disco" ID="6d8f1359-050b-4448-ade9-a024e62563bb" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Province.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

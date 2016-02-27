@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{499C20A6-EA8B-4D6B-AE64-FAE2F70A03B5}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVCpart</RootNamespace>
+    <AssemblyName>MVCpart</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\Class\ClientFactory.cs" />
+    <Compile Include="Controllers\Class\ClientType.cs" />
+    <Compile Include="Controllers\Class\EX_Fuction.cs" />
+    <Compile Include="Controllers\Class\GlobalParams.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
+    <Compile Include="Pic.ashx.cs">
+      <DependentUpon>Pic.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ActionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BrandService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CarSummeryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CheckoutService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrderService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrderSummeryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProvinceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ShopService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TypeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserSummeryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VersionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\CarSelect.css" />
+    <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jquery-ui-1.8.20.custom.css" />
+    <Content Include="Content\jquery.ui.accordion.css" />
+    <Content Include="Content\jquery.ui.all.css" />
+    <Content Include="Content\jquery.ui.autocomplete.css" />
+    <Content Include="Content\jquery.ui.base.css" />
+    <Content Include="Content\jquery.ui.button.css" />
+    <Content Include="Content\jquery.ui.core.css" />
+    <Content Include="Content\jquery.ui.datepicker.css" />
+    <Content Include="Content\jquery.ui.dialog.css" />
+    <Content Include="Content\jquery.ui.progressbar.css" />
+    <Content Include="Content\jquery.ui.resizable.css" />
+    <Content Include="Content\jquery.ui.selectable.css" />
+    <Content Include="Content\jquery.ui.slider.css" />
+    <Content Include="Content\jquery.ui.tabs.css" />
+    <Content Include="Content\jquery.ui.theme.css" />
+    <Content Include="Content\UserLogin.css" />
+    <Content Include="Content\UserReg.css" />
+    <Content Include="Content\Sytles.css" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\ui-lightness\jquery-ui-1.8.20.custom.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\20120424160005465.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\8796376.gif" />
+    <Content Include="Images\bg02.gif" />
+    <Content Include="Images\bg04.gif" />
+    <Content Include="Images\bg07.gif" />
+    <Content Include="Images\box_title02.gif" />
+    <Content Include="Images\btn03.gif" />
+    <Content Include="Images\dot09.gif" />
+    <Content Include="Images\dot10.gif" />
+    <Content Include="Images\dot11.gif" />
+    <Content Include="Images\J_L_145.jpg" />
+    <Content Include="Images\J_L_170.jpg" />
+    <Content Include="Images\J_L_191.jpg" />
+    <Content Include="Images\J_L_192.jpg" />
+    <Content Include="Images\J_L_193.jpg" />
+    <Content Include="Images\J_L_201.jpg" />
+    <Content Include="Images\J_L_211.jpg" />
+    <Content Include="Images\J_L_214.jpg" />
+    <Content Include="Images\J_L_217.jpg" />
+    <Content Include="Images\J_L_218.jpg" />
+    <Content Include="Images\J_L_219.jpg" />
+    <Content Include="Images\J_L_226.jpg" />
+    <Content Include="Images\J_L_239.jpg" />
+    <Content Include="Images\J_L_277.jpg" />
+    <Content Include="Images\J_L_311.jpg" />
+    <Content Include="Images\J_L_320.jpg" />
+    <Content Include="Images\J_L_330.jpg" />
+    <Content Include="Images\J_L_342.jpg" />
+    <None Include="Service References\ActionService\Action.wsdl" />
+    <None Include="Service References\ActionService\Action.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionService\Action1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionService\Action2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionService\Action3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionService\MVCpart.ActionService.Car_Action.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BrandService\Brand.wsdl" />
+    <None Include="Service References\BrandService\Brand.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandService\Brand1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandService\Brand2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandService\Brand3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandService\MVCpart.BrandService.Car_Brand.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarSummeryService\CarSummery.wsdl" />
+    <None Include="Service References\CarSummeryService\CarSummery.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarSummeryService\CarSummery1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarSummeryService\CarSummery2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarSummeryService\MVCpart.CarSummeryService.Car_Shop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarSummeryService\MVCpart.CarSummeryService.Car_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout.wsdl" />
+    <None Include="Service References\CheckoutService\Checkout.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CheckoutService\MVCpart.CheckoutService.Car_Checkout.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CityService\City.wsdl" />
+    <None Include="Service References\CityService\City.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CityService\City1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CityService\City2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CityService\City3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CityService\MVCpart.CityService.Car_City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\MVCpart.OrderService.Car_Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\Order.disco" />
+    <None Include="Service References\OrderService\configuration91.svcinfo" />
+    <None Include="Service References\OrderService\configuration.svcinfo" />
+    <None Include="Service References\OrderService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ActionService\Action.disco" />
+    <None Include="Service References\ActionService\configuration91.svcinfo" />
+    <None Include="Service References\ActionService\configuration.svcinfo" />
+    <None Include="Service References\ActionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\OrderSummeryService\MVCpart.OrderSummeryService.Order_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderSummeryService\OrderSummery.wsdl" />
+    <None Include="Service References\OrderSummeryService\OrderSummery.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderSummeryService\OrderSummery1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderSummeryService\OrderSummery2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\MVCpart.ProvinceService.Car_Province.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProvinceService\Province.disco" />
+    <None Include="Service References\ProvinceService\configuration91.svcinfo" />
+    <None Include="Service References\ProvinceService\configuration.svcinfo" />
+    <None Include="Service References\ProvinceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CityService\City.disco" />
+    <None Include="Service References\CityService\configuration91.svcinfo" />
+    <None Include="Service References\CityService\configuration.svcinfo" />
+    <None Include="Service References\CityService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ShopService\MVCpart.ShopService.Car_Shop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShopService\Shop.wsdl" />
+    <None Include="Service References\ShopService\Shop.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\Shop1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\Shop2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\Shop3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TypeService\MVCpart.TypeService.Car_Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TypeService\Type.wsdl" />
+    <None Include="Service References\TypeService\Type.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TypeService\Type1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TypeService\Type2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TypeService\Type3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\MVCpart.UserManagerService.aspnet_UsersEX.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\MVCpart.UserManagerService.Shop_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\MVCpart.UserManagerService.User_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager.wsdl" />
+    <None Include="Service References\UserManagerService\UserManager.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\MVCpart.UserSummeryService.aspnet_UsersEX.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserSummeryService\MVCpart.UserSummeryService.User_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery.disco" />
+    <None Include="Service References\UserSummeryService\configuration91.svcinfo" />
+    <None Include="Service References\UserSummeryService\configuration.svcinfo" />
+    <None Include="Service References\UserSummeryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager.disco" />
+    <None Include="Service References\UserManagerService\configuration91.svcinfo" />
+    <None Include="Service References\UserManagerService\configuration.svcinfo" />
+    <None Include="Service References\UserManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ShopService\Shop.disco" />
+    <None Include="Service References\ShopService\configuration91.svcinfo" />
+    <None Include="Service References\ShopService\configuration.svcinfo" />
+    <None Include="Service References\ShopService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TypeService\Type.disco" />
+    <None Include="Service References\TypeService\configuration91.svcinfo" />
+    <None Include="Service References\TypeService\configuration.svcinfo" />
+    <None Include="Service References\TypeService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout.disco" />
+    <None Include="Service References\CheckoutService\configuration91.svcinfo" />
+    <None Include="Service References\CheckoutService\configuration.svcinfo" />
+    <None Include="Service References\CheckoutService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\VersionService\MVCpart.VersionService.Car_Version.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VersionService\Version.disco" />
+    <None Include="Service References\VersionService\configuration91.svcinfo" />
+    <None Include="Service References\VersionService\configuration.svcinfo" />
+    <None Include="Service References\VersionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BrandService\Brand.disco" />
+    <None Include="Service References\BrandService\configuration91.svcinfo" />
+    <None Include="Service References\BrandService\configuration.svcinfo" />
+    <None Include="Service References\BrandService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CarSummeryService\CarSummery.disco" />
+    <None Include="Service References\CarSummeryService\configuration91.svcinfo" />
+    <None Include="Service References\CarSummeryService\configuration.svcinfo" />
+    <None Include="Service References\CarSummeryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\OrderSummeryService\OrderSummery.disco" />
+    <None Include="Service References\OrderSummeryService\configuration91.svcinfo" />
+    <None Include="Service References\OrderSummeryService\configuration.svcinfo" />
+    <None Include="Service References\OrderSummeryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Images\more.gif" />
+    <Content Include="Images\p08.gif" />
+    <Content Include="Images\p11.gif" />
+    <Content Include="Images\p14.gif" />
+    <Content Include="Images\电话.gif" />
+    <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.2.js" />
+    <Content Include="Scripts\jquery-1.7.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.custom.min.js" />
+    <Content Include="Scripts\JS_ajax.js" />
+    <Content Include="Views\Car\OrderFaile.aspx" />
+    <Content Include="Views\Car\OrderPart.ascx" />
+    <Content Include="Views\Car\OrderSuccess.aspx" />
+    <Content Include="Views\Car\SelectCar.ascx" />
+    <Content Include="Views\Car\Select.aspx" />
+    <Content Include="Views\Car\SelectCity.ascx" />
+    <Content Include="Views\Car\SelectArea.aspx" />
+    <Content Include="Views\Car\SelectInfo.aspx" />
+    <Content Include="Views\Car\ViewUserControl.ascx" />
+    <Content Include="Views\User\Login.aspx" />
+    <Content Include="Views\Shared\LoginPart.ascx" />
+    <Content Include="Views\User\RegUser.aspx" />
+    <Content Include="Views\User\Success.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+    <None Include="Service References\OrderService\Order.wsdl" />
+    <None Include="Service References\OrderService\Order2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderService\Order3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\Province.wsdl" />
+    <None Include="Service References\ProvinceService\Province.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\Province1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\Province2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\Province3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery.wsdl" />
+    <None Include="Service References\UserSummeryService\UserSummery.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VersionService\Version.wsdl" />
+    <None Include="Service References\VersionService\Version.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VersionService\Version1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VersionService\Version2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VersionService\Version3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="WebMap.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\User\WaterMark.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WaterMark.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pic.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ActionService\" />
+    <WCFMetadataStorage Include="Service References\BrandService\" />
+    <WCFMetadataStorage Include="Service References\CarSummeryService\" />
+    <WCFMetadataStorage Include="Service References\CheckoutService\" />
+    <WCFMetadataStorage Include="Service References\CityService\" />
+    <WCFMetadataStorage Include="Service References\OrderService\" />
+    <WCFMetadataStorage Include="Service References\OrderSummeryService\" />
+    <WCFMetadataStorage Include="Service References\ProvinceService\" />
+    <WCFMetadataStorage Include="Service References\ShopService\" />
+    <WCFMetadataStorage Include="Service References\TypeService\" />
+    <WCFMetadataStorage Include="Service References\UserManagerService\" />
+    <WCFMetadataStorage Include="Service References\UserSummeryService\" />
+    <WCFMetadataStorage Include="Service References\VersionService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrderService\Order.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderService\Order1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6189</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

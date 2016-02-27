@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CarRental" EntityNamespace="WCFpart" ContextNamespace="WCFpart" Class="CarRentalDBDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=CarRental;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Models.Properties.Settings.CarRentalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.aspnet_Membership" Member="aspnet_Membership">
+    <Type Name="aspnet_Membership">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordFormat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordSalt" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="MobilePIN" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="LoweredEmail" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordQuestion" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordAnswer" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastPasswordChangedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastLockoutDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAttemptWindowStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAnswerAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAnswerAttemptWindowStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="aspnet_Users_aspnet_Membership" Member="aspnet_Users" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Roles" Member="aspnet_Roles">
+    <Type Name="aspnet_Roles">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredRoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="aspnet_Roles_aspnet_UsersInRoles" Member="aspnet_UsersInRoles" ThisKey="RoleId" OtherKey="RoleId" Type="aspnet_UsersInRoles" />
+      <Association Name="aspnet_Roles_User_Salary" Member="User_Salary" ThisKey="RoleId" OtherKey="Salary_Role" Type="User_Salary" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Users" Member="aspnet_Users">
+    <Type Name="aspnet_Users">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="IsAnonymous" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Users_aspnet_Membership" Member="aspnet_Membership" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Membership" Cardinality="One" />
+      <Association Name="aspnet_Users_aspnet_UsersInRoles" Member="aspnet_UsersInRoles" ThisKey="UserId" OtherKey="UserId" Type="aspnet_UsersInRoles" />
+      <Association Name="aspnet_Users_User_SalaryLog" Member="User_SalaryLog" ThisKey="UserId" OtherKey="SalaryLog_User" Type="User_SalaryLog" />
+      <Association Name="aspnet_Users_User_WorkRAP" Member="User_WorkRAP" ThisKey="UserId" OtherKey="WorkRAP_User" Type="User_WorkRAP" />
+      <Association Name="aspnet_Users_Car_Account" Member="Car_Account" ThisKey="UserId" OtherKey="Account_User" Type="Car_Account" />
+      <Association Name="aspnet_Users_Car_Checkout" Member="Car_Checkout" ThisKey="UserId" OtherKey="Checkout_User" Type="Car_Checkout" />
+      <Association Name="aspnet_Users_aspnet_UsersEX" Member="aspnet_UsersEX" ThisKey="UserId" OtherKey="User_ID" Type="aspnet_UsersEX" />
+      <Association Name="aspnet_Users_UserInShop" Member="UserInShop" ThisKey="UserId" OtherKey="UserID" Type="UserInShop" Cardinality="One" />
+      <Association Name="aspnet_Users_Car_Order" Member="Car_Order" ThisKey="UserId" OtherKey="Order_User" Type="Car_Order" />
+      <Association Name="aspnet_Users_User_SalaryAppend" Member="User_SalaryAppend" ThisKey="UserId" OtherKey="SalaryAppend_User" Type="User_SalaryAppend" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_UsersInRoles" Member="aspnet_UsersInRoles">
+    <Type Name="aspnet_UsersInRoles">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="aspnet_Roles_aspnet_UsersInRoles" Member="aspnet_Roles" ThisKey="RoleId" OtherKey="RoleId" Type="aspnet_Roles" IsForeignKey="true" />
+      <Association Name="aspnet_Users_aspnet_UsersInRoles" Member="aspnet_Users" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Brand" Member="Car_Brand">
+    <Type Name="Car_Brand">
+      <Column Name="Brand_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Brand_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand_IMG" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Brand_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Car_Brand_Car_Version" Member="Car_Version" ThisKey="Brand_ID" OtherKey="Version_Brand" Type="Car_Version" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Type" Member="Car_Type">
+    <Type Name="Car_Type">
+      <Column Name="Type_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Car_Type_Car_Version" Member="Car_Version" ThisKey="Type_ID" OtherKey="Version_Type" Type="Car_Version" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_SalaryLog" Member="User_SalaryLog">
+    <Type Name="User_SalaryLog">
+      <Column Name="SalaryLog_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalaryLog_Mark" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryLog_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryLog_User" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Users_User_SalaryLog" Member="aspnet_Users" ThisKey="SalaryLog_User" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Error" Member="Error">
+    <Type Name="Error">
+      <Column Name="Error_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Error_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Error_Messege" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Shop" Member="Car_Shop">
+    <Type Name="Car_Shop">
+      <Column Name="Shop_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Shop_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_City" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Car_Shop_Car_Account" Member="Car_Account" ThisKey="Shop_ID" OtherKey="Account_Shop" Type="Car_Account" />
+      <Association Name="Car_Shop_Car_Version" Member="Car_Version" ThisKey="Shop_ID" OtherKey="Version_Shop" Type="Car_Version" />
+      <Association Name="Car_Shop_UserInShop" Member="UserInShop" ThisKey="Shop_ID" OtherKey="ShopID" Type="UserInShop" />
+      <Association Name="Car_Shop_Car_Order" Member="Car_Order" ThisKey="Shop_ID" OtherKey="Order_Shop" Type="Car_Order" />
+      <Association Name="Car_City_Car_Shop" Member="Car_City" ThisKey="Shop_City" OtherKey="City_ID" Type="Car_City" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Province" Member="Car_Province">
+    <Type Name="Car_Province">
+      <Column Name="Province_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Province_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Car_Province_Car_City" Member="Car_City" ThisKey="Province_ID" OtherKey="City_Province" Type="Car_City" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_City" Member="Car_City">
+    <Type Name="Car_City">
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="City_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City_Province" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Car_City_Car_Shop" Member="Car_Shop" ThisKey="City_ID" OtherKey="Shop_City" Type="Car_Shop" />
+      <Association Name="Car_Province_Car_City" Member="Car_Province" ThisKey="City_Province" OtherKey="Province_ID" Type="Car_Province" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_WorkRAP" Member="User_WorkRAP">
+    <Type Name="User_WorkRAP">
+      <Column Name="WorkRAP_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WorkRAP_User" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="WorkRAP_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WorkRAP_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Users_User_WorkRAP" Member="aspnet_Users" ThisKey="WorkRAP_User" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+      <Association Name="User_RAP_User_WorkRAP" Member="User_RAP" ThisKey="WorkRAP_ID" OtherKey="RAP_ID" Type="User_RAP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_RAP" Member="User_RAP">
+    <Type Name="User_RAP">
+      <Column Name="RAP_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RAP_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RAP_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="User_RAP_User_WorkRAP" Member="User_WorkRAP" ThisKey="RAP_ID" OtherKey="WorkRAP_ID" Type="User_WorkRAP" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_Salary" Member="User_Salary">
+    <Type Name="User_Salary">
+      <Column Name="Salary_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Salary_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Salary_Role" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Roles_User_Salary" Member="aspnet_Roles" ThisKey="Salary_Role" OtherKey="RoleId" Type="aspnet_Roles" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Account" Member="Car_Account">
+    <Type Name="Car_Account">
+      <Column Name="Account_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Account_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Account_User" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Account_Shop" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Account_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Account_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="aspnet_Users_Car_Account" Member="aspnet_Users" ThisKey="Account_User" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+      <Association Name="Car_Shop_Car_Account" Member="Car_Shop" ThisKey="Account_Shop" OtherKey="Shop_ID" Type="Car_Shop" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Action" Member="Car_Action">
+    <Type Name="Car_Action">
+      <Column Name="Action_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Action_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Action_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Action_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Car_Action_Car_Order" Member="Car_Order" ThisKey="Action_ID" OtherKey="Order_Action" Type="Car_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_RentalType" Member="Car_RentalType">
+    <Type Name="Car_RentalType">
+      <Column Name="RentalType_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RentalType_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RentalType_Money" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Car_RentalType_Car_Order" Member="Car_Order" ThisKey="RentalType_ID" OtherKey="Order_RentalType" Type="Car_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_ViewModel" Member="Car_ViewModel">
+    <Type Name="Car_ViewModel">
+      <Column Name="Type_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Brand_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Brand_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand_IMG" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Brand_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Shop_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Province_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Province_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Version_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Person" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Normal_Rental" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Member_Rental" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Normal_Catch" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Member_Catch" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Over" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Riding" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Over_Riding" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Version_IMG" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Version_Price_Deposit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_BaseKM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Version" Member="Car_Version">
+    <Type Name="Car_Version">
+      <Column Name="Version_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Version_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Person" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Brand" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Shop" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Normal_Rental" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Member_Rental" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Normal_Catch" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Member_Catch" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Over" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Riding" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Over_Riding" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Deposit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Version_IMG" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Version_BaseKM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Car_Version_Car_Order" Member="Car_Order" ThisKey="Version_ID" OtherKey="Order_Version" Type="Car_Order" />
+      <Association Name="Car_Brand_Car_Version" Member="Car_Brand" ThisKey="Version_Brand" OtherKey="Brand_ID" Type="Car_Brand" IsForeignKey="true" />
+      <Association Name="Car_Shop_Car_Version" Member="Car_Shop" ThisKey="Version_Shop" OtherKey="Shop_ID" Type="Car_Shop" IsForeignKey="true" />
+      <Association Name="Car_Type_Car_Version" Member="Car_Type" ThisKey="Version_Type" OtherKey="Type_ID" Type="Car_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Checkout" Member="Car_Checkout">
+    <Type Name="Car_Checkout">
+      <Column Name="Checkout_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Checkout_Order" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Checkout_User" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Checkout_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Checkout_KM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Checkout_Mark" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Users_Car_Checkout" Member="aspnet_Users" ThisKey="Checkout_User" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+      <Association Name="Car_Order_Car_Checkout" Member="Car_Order" ThisKey="Checkout_Order" OtherKey="Order_ID" Type="Car_Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Salary_ViewModel" Member="Salary_ViewModel">
+    <Type Name="Salary_ViewModel">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Salary_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Salary_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Salary_Role" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredRoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_UsersEX" Member="aspnet_UsersEX">
+    <Type Name="aspnet_UsersEX">
+      <Column Name="User_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="User_Validation" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="User_RealName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="User_Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="User_Adress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="User_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="aspnet_Users_aspnet_UsersEX" Member="aspnet_Users" ThisKey="User_ID" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shop_ViewModel" Member="Shop_ViewModel">
+    <Type Name="Shop_ViewModel">
+      <Column Name="Province_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Province_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserInShop" Member="UserInShop">
+    <Type Name="UserInShop">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Users_UserInShop" Member="aspnet_Users" ThisKey="UserID" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+      <Association Name="Car_Shop_UserInShop" Member="Car_Shop" ThisKey="ShopID" OtherKey="Shop_ID" Type="Car_Shop" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Order_ViewModel" Member="Order_ViewModel">
+    <Type Name="Order_ViewModel">
+      <Column Name="Version_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Person" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Normal_Rental" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Member_Rental" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Normal_Catch" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Member_Catch" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Over" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Riding" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Over_Riding" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Price_Deposit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Version_BaseKM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Version_IMG" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Brand_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Brand_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand_IMG" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Brand_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Type_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Shop_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Province_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Province_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Action_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Action_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Action_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Action_Info" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Client_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Client_UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Client_LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Client_MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Client_Validaton" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Client_RealName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Client_Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Client_Adress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Client_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Client_RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Client_RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Staff_ID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Staff_UserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Staff_LoweredUserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Staff_MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Staff_Validation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Staff_RealName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Staff_Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Staff_Adress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Staff_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Start_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Order_End_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Message" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Order_IsCatch" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RentalType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RentalType_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Checkout_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Checkout_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Checkout_KM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Checkout_Mark" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Order_DepositPay" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Order" Member="Car_Order">
+    <Type Name="Car_Order">
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Order_User" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Shop" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Version" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_RentalType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Start_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Order_End_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Action" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Message" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Order_IsCatch" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Order_DepositPay" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Car_Order_Car_Checkout" Member="Car_Checkout" ThisKey="Order_ID" OtherKey="Checkout_Order" Type="Car_Checkout" />
+      <Association Name="Car_Order_Car_Get" Member="Car_Get" ThisKey="Order_ID" OtherKey="GetCar_Order" Type="Car_Get" />
+      <Association Name="aspnet_Users_Car_Order" Member="aspnet_Users" ThisKey="Order_User" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+      <Association Name="Car_Action_Car_Order" Member="Car_Action" ThisKey="Order_Action" OtherKey="Action_ID" Type="Car_Action" IsForeignKey="true" />
+      <Association Name="Car_RentalType_Car_Order" Member="Car_RentalType" ThisKey="Order_RentalType" OtherKey="RentalType_ID" Type="Car_RentalType" IsForeignKey="true" />
+      <Association Name="Car_Shop_Car_Order" Member="Car_Shop" ThisKey="Order_Shop" OtherKey="Shop_ID" Type="Car_Shop" IsForeignKey="true" />
+      <Association Name="Car_Version_Car_Order" Member="Car_Version" ThisKey="Order_Version" OtherKey="Version_ID" Type="Car_Version" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RAP_ViewModel" Member="RAP_ViewModel">
+    <Type Name="RAP_ViewModel">
+      <Column Name="RAP_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RAP_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="WorkRAP_User" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="WorkRAP_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="WorkRAP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RAP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalaryAppend_ViewModel" Member="SalaryAppend_ViewModel">
+    <Type Name="SalaryAppend_ViewModel">
+      <Column Name="SalaryAppend_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryAppend_User" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryAppend_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryAppend_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryAppend_Info" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_SalaryAppend" Member="User_SalaryAppend">
+    <Type Name="User_SalaryAppend">
+      <Column Name="SalaryAppend_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalaryAppend_User" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryAppend_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryAppend_Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryAppend_Info" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="aspnet_Users_User_SalaryAppend" Member="aspnet_Users" ThisKey="SalaryAppend_User" OtherKey="UserId" Type="aspnet_Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalaryInfo_ViewModel" Member="SalaryInfo_ViewModel">
+    <Type Name="SalaryInfo_ViewModel">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="User_Validation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="User_RealName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="User_Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="User_Adress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="User_Info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Salary_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Salary_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Salary_Role" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredRoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Shop_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RAP_Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SalaryAppend_Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="SalaryLog_Mark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TatalPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SalaryLog_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car_Get" Member="Car_Get">
+    <Type Name="Car_Get">
+      <Column Name="GetCar_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GetCar_Order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GetCar_UserValidation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GetCar_CarNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Car_Order_Car_Get" Member="Car_Order" ThisKey="GetCar_Order" OtherKey="Order_ID" Type="Car_Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

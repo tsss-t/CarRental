@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/Personnel/WorkRAP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="User_WorkRAP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WorkRAP_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkRAP_User" type="ser:guid" />
+      <xs:element minOccurs="0" name="WorkRAP_Type" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkRAP_Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User_WorkRAP" nillable="true" type="tns:User_WorkRAP" />
+  <xs:complexType name="ArrayOfUser_WorkRAP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User_WorkRAP" nillable="true" type="tns:User_WorkRAP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser_WorkRAP" nillable="true" type="tns:ArrayOfUser_WorkRAP" />
+</xs:schema>

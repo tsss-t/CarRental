@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7b5351fc-85a8-444c-ae37-790390e52d4b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/CarRental/Order.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Order.xsd" MetadataType="Schema" ID="932cbb14-c8c9-4252-bbad-3da173a46e93" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Order.svc?xsd=xsd3" />
+    <MetadataFile FileName="Order1.xsd" MetadataType="Schema" ID="4ac1d9ac-0f19-4e2d-8bd1-33baa4448743" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Order.svc?xsd=xsd2" />
+    <MetadataFile FileName="Order.disco" MetadataType="Disco" ID="b2cf9b0f-581b-4339-a4a7-b4acd2f7a692" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Order.svc?disco" />
+    <MetadataFile FileName="Order2.xsd" MetadataType="Schema" ID="57394f77-2235-495e-9f47-1a56a102b493" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Order.svc?xsd=xsd0" />
+    <MetadataFile FileName="Order.wsdl" MetadataType="Wsdl" ID="4641a385-f244-4c73-b18f-2ce553eebf50" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Order.svc?wsdl" />
+    <MetadataFile FileName="Order3.xsd" MetadataType="Schema" ID="c3074e2b-d549-4d2d-8b54-803afdb62641" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Order.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

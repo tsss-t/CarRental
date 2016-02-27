@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WCFpart.SOA.Function.Type" CodeBehind="Type.svc.cs" %>

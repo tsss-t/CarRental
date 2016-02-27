@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="35fa38b2-2a72-4777-8745-cfaa65fe1e03" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/CarRental/Shop.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Shop.disco" MetadataType="Disco" ID="6bde2d40-f075-4747-9dd2-35518ec2dd1c" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Shop.svc?disco" />
+    <MetadataFile FileName="Shop.xsd" MetadataType="Schema" ID="b74ab604-7ac4-4f7c-8d0d-71b55bcad959" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Shop.svc?xsd=xsd2" />
+    <MetadataFile FileName="Shop1.xsd" MetadataType="Schema" ID="a1d8237e-4fd9-40b2-b33a-617030c60878" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Shop.svc?xsd=xsd3" />
+    <MetadataFile FileName="Shop2.xsd" MetadataType="Schema" ID="ec4ba30d-915b-4d92-80fa-833383df7a3f" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Shop.svc?xsd=xsd0" />
+    <MetadataFile FileName="Shop3.xsd" MetadataType="Schema" ID="8ccb6572-b486-484b-9c9d-699a2e3d72f7" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Shop.svc?xsd=xsd1" />
+    <MetadataFile FileName="Shop.wsdl" MetadataType="Wsdl" ID="518ba894-4f26-47af-97b5-fa36cfc8d15a" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/Shop.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

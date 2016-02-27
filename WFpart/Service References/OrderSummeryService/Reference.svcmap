@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bd6be63f-f46f-4b17-95e7-43b75dc98cc9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrderSummery.wsdl" MetadataType="Wsdl" ID="12c4cc66-956c-48bd-9930-521b1de8558e" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc?wsdl" />
+    <MetadataFile FileName="OrderSummery1.xsd" MetadataType="Schema" ID="40d3873c-12df-4813-920d-b83edb518818" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc?xsd=xsd1" />
+    <MetadataFile FileName="OrderSummery2.xsd" MetadataType="Schema" ID="e1a1afea-325a-4c0c-af1f-9809af5f7f41" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc?xsd=xsd0" />
+    <MetadataFile FileName="OrderSummery.disco" MetadataType="Disco" ID="f89edd92-a76b-4afe-b178-bee20a5da82e" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc?disco" />
+    <MetadataFile FileName="OrderSummery.xsd" MetadataType="Schema" ID="b43be4ec-afb3-470c-8612-361fcd60f80f" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Synthesize/OrderSummery.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

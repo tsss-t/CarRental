@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/Synthesize/UserManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="aspnet_UsersEX">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="User_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="User_Validation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_RealName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Adress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Info" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="aspnet_UsersEX" nillable="true" type="tns:aspnet_UsersEX" />
+  <xs:complexType name="ArrayOfShop_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Shop_ViewModel" nillable="true" type="tns:Shop_ViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShop_ViewModel" nillable="true" type="tns:ArrayOfShop_ViewModel" />
+  <xs:complexType name="Shop_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Province_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Province_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="City_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Shop_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoweredUserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Shop_ViewModel" nillable="true" type="tns:Shop_ViewModel" />
+  <xs:complexType name="ArrayOfaspnet_UsersEX">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="aspnet_UsersEX" nillable="true" type="tns:aspnet_UsersEX" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfaspnet_UsersEX" nillable="true" type="tns:ArrayOfaspnet_UsersEX" />
+</xs:schema>

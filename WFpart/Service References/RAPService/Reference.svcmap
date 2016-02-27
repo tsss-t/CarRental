@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="45993caf-183b-4c3a-848c-275649fb059e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/Personnel/RAP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RAP.wsdl" MetadataType="Wsdl" ID="726fd350-b4b6-475e-ac23-fdc41b132b5e" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/RAP.svc?wsdl" />
+    <MetadataFile FileName="RAP.disco" MetadataType="Disco" ID="94c18383-15b7-47ed-8b67-b6366fe20795" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/RAP.svc?disco" />
+    <MetadataFile FileName="RAP.xsd" MetadataType="Schema" ID="095d1c60-5068-4b29-89e5-21edd0a9804b" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/RAP.svc?xsd=xsd3" />
+    <MetadataFile FileName="RAP1.xsd" MetadataType="Schema" ID="e82a5f8f-cf75-45ee-add6-705e86d58dbc" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/RAP.svc?xsd=xsd1" />
+    <MetadataFile FileName="RAP2.xsd" MetadataType="Schema" ID="b8479928-dea2-4842-8028-8d314f3b9852" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/RAP.svc?xsd=xsd2" />
+    <MetadataFile FileName="RAP3.xsd" MetadataType="Schema" ID="996e4494-9f5b-4ce8-ab2b-8cf31bfe2b47" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/Personnel/RAP.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

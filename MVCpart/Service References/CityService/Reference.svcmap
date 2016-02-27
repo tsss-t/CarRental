@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c360551-e3c0-4302-8ad1-7b2698162e18" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://kazenotsubasa/SOA/Function/CarRental/City.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="City.disco" MetadataType="Disco" ID="131a0ba9-be68-4ed4-a58b-2ec7867674d2" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/City.svc?disco" />
+    <MetadataFile FileName="City.xsd" MetadataType="Schema" ID="aa6dd0c8-38d1-48fe-bf4d-ba311d9e18ef" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/City.svc?xsd=xsd0" />
+    <MetadataFile FileName="City1.xsd" MetadataType="Schema" ID="a5270203-d0bc-4d4a-8d4d-33da882d2eef" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/City.svc?xsd=xsd1" />
+    <MetadataFile FileName="City2.xsd" MetadataType="Schema" ID="fb435d44-1ab0-43d5-ad82-fe572ca18d48" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/City.svc?xsd=xsd2" />
+    <MetadataFile FileName="City3.xsd" MetadataType="Schema" ID="63d0535d-d55e-40d5-9b18-5babfbcbaf1c" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/City.svc?xsd=xsd3" />
+    <MetadataFile FileName="City.wsdl" MetadataType="Wsdl" ID="a3c4bf5c-7fe1-4d7e-ae24-a945f411ef3d" SourceId="1" SourceUrl="http://kazenotsubasa/SOA/Function/CarRental/City.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

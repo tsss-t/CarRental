@@ -1,0 +1,1011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17C0176E-164F-4924-A814-9CDFC36AFF6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WFpart</RootNamespace>
+    <AssemblyName>WFpart</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\ClientFactory.cs" />
+    <Compile Include="Class\ClientType.cs" />
+    <Compile Include="Class\EX_Fuction.cs" />
+    <Compile Include="Forms\Shopper\Form_CanncelOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_CanncelOrder.Designer.cs">
+      <DependentUpon>Form_CanncelOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_CarBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_CarBack.Designer.cs">
+      <DependentUpon>Form_CarBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_Delete.Designer.cs">
+      <DependentUpon>Form_Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_PayDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_PayDeposit.Designer.cs">
+      <DependentUpon>Form_PayDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_CityManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_CityManage.Designer.cs">
+      <DependentUpon>Form_CityManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_BrandManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_BrandManage.Designer.cs">
+      <DependentUpon>Form_BrandManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_CarTypeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_CarTypeManage.Designer.cs">
+      <DependentUpon>Form_CarTypeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_LastCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_LastCheck.Designer.cs">
+      <DependentUpon>Form_LastCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\GlobalParams.cs" />
+    <Compile Include="Forms\Form_LoginRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_LoginRole.Designer.cs">
+      <DependentUpon>Form_LoginRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Program.cs" />
+    <Compile Include="Forms\Shopper\Form_OrderManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_OrderManage.Designer.cs">
+      <DependentUpon>Form_OrderManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_SelectOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_SelectOrder.Designer.cs">
+      <DependentUpon>Form_SelectOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_ShopVerison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_ShopVerison.Designer.cs">
+      <DependentUpon>Form_ShopVerison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_Money.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_Money.Designer.cs">
+      <DependentUpon>Form_Money.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_UserInShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_UserInShop.Designer.cs">
+      <DependentUpon>Form_UserInShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_ShopManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_ShopManage.Designer.cs">
+      <DependentUpon>Form_ShopManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_VersionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_VersionInfo.Designer.cs">
+      <DependentUpon>Form_VersionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_VersionManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_VersionManage.Designer.cs">
+      <DependentUpon>Form_VersionManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_ActionManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_ActionManage.Designer.cs">
+      <DependentUpon>Form_ActionManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_UserSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_UserSalary.Designer.cs">
+      <DependentUpon>Form_UserSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_Salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_Salary.Designer.cs">
+      <DependentUpon>Form_Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_RAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_RAP.Designer.cs">
+      <DependentUpon>Form_RAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_SalaryAppend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_SalaryAppend.Designer.cs">
+      <DependentUpon>Form_SalaryAppend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_SalaryResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_SalaryResult.Designer.cs">
+      <DependentUpon>Form_SalaryResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_SalaryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShopAdmin\Form_SalaryInfo.Designer.cs">
+      <DependentUpon>Form_SalaryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_CatchCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shopper\Form_CatchCar.Designer.cs">
+      <DependentUpon>Form_CatchCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AccountService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ActionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BrandService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CarSummeryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CheckoutService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GetCarService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrderService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrderSummeryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProvinceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RAPService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalaryAppendService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalaryInfoSummeryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalaryLogService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalaryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ShopService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TypeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserSummeryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_UserInRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_UserInRole.Designer.cs">
+      <DependentUpon>Form_UserInRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_UserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperAdmin\Form_UserManage.Designer.cs">
+      <DependentUpon>Form_UserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VersionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WorkRAPService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\ShopAdmin\Form_RAP.resx">
+      <DependentUpon>Form_RAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShopAdmin\Form_Salary.resx">
+      <DependentUpon>Form_Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShopAdmin\Form_SalaryAppend.resx">
+      <DependentUpon>Form_SalaryAppend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShopAdmin\Form_SalaryResult.resx">
+      <DependentUpon>Form_SalaryResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_CanncelOrder.resx">
+      <DependentUpon>Form_CanncelOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_CarBack.resx">
+      <DependentUpon>Form_CarBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_Delete.resx">
+      <DependentUpon>Form_Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_PayDeposit.resx">
+      <DependentUpon>Form_PayDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_CityManage.resx">
+      <DependentUpon>Form_CityManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_BrandManage.resx">
+      <DependentUpon>Form_BrandManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_CarTypeManage.resx">
+      <DependentUpon>Form_CarTypeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_LastCheck.resx">
+      <DependentUpon>Form_LastCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_LoginRole.resx">
+      <DependentUpon>Form_LoginRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_OrderManage.resx">
+      <DependentUpon>Form_OrderManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_SelectOrder.resx">
+      <DependentUpon>Form_SelectOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShopAdmin\Form_ShopVerison.resx">
+      <DependentUpon>Form_ShopVerison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_Money.resx">
+      <DependentUpon>Form_Money.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_UserInShop.resx">
+      <DependentUpon>Form_UserInShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_ShopManage.resx">
+      <DependentUpon>Form_ShopManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_UserManage.resx">
+      <DependentUpon>Form_UserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_VersionInfo.resx">
+      <DependentUpon>Form_VersionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_VersionManage.resx">
+      <DependentUpon>Form_VersionManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_ActionManage.resx">
+      <DependentUpon>Form_ActionManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_UserSalary.resx">
+      <DependentUpon>Form_UserSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShopAdmin\Form_SalaryInfo.resx">
+      <DependentUpon>Form_SalaryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shopper\Form_CatchCar.resx">
+      <DependentUpon>Form_CatchCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\SuperAdmin\Form_UserInRole.resx">
+      <DependentUpon>Form_UserInRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\AccountService\Account.wsdl" />
+    <None Include="Service References\AccountService\Account.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountService\Account1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountService\Account2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountService\Account3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountService\WFpart.AccountService.Car_Account.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionService\Action.wsdl" />
+    <None Include="Service References\ActionService\Action.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionService\Action1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionService\Action2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionService\Action3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionService\WFpart.ActionService.Car_Action.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BrandService\Brand.wsdl" />
+    <None Include="Service References\BrandService\Brand.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandService\Brand1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandService\Brand2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandService\Brand3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandService\WFpart.BrandService.Car_Brand.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarSummeryService\CarSummery.wsdl" />
+    <None Include="Service References\CarSummeryService\CarSummery.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarSummeryService\CarSummery1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarSummeryService\CarSummery2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarSummeryService\WFpart.CarSummeryService.Car_Shop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarSummeryService\WFpart.CarSummeryService.Car_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout.wsdl" />
+    <None Include="Service References\CheckoutService\Checkout.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CheckoutService\Checkout3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CheckoutService\WFpart.CheckoutService.Car_Checkout.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CityService\City.wsdl" />
+    <None Include="Service References\CityService\City.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CityService\City1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CityService\City2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CityService\City3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CityService\WFpart.CityService.Car_City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetCarService\GetCar.wsdl" />
+    <None Include="Service References\GetCarService\GetCar.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetCarService\GetCar1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetCarService\GetCar2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetCarService\GetCar3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetCarService\WFpart.GetCarService.Car_Get.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\Order.wsdl" />
+    <None Include="Service References\OrderService\Order.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderService\Order1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderService\Order2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderService\Order3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderService\WFpart.OrderService.Car_Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderSummeryService\OrderSummery.wsdl" />
+    <None Include="Service References\OrderSummeryService\OrderSummery.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderSummeryService\OrderSummery1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderSummeryService\OrderSummery2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderSummeryService\WFpart.OrderSummeryService.Order_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProvinceService\Province.wsdl" />
+    <None Include="Service References\ProvinceService\Province.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\Province1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\Province2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\Province3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProvinceService\WFpart.ProvinceService.Car_Province.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RAPService\RAP.wsdl" />
+    <None Include="Service References\RAPService\RAP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RAPService\RAP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RAPService\RAP2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RAPService\RAP3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RAPService\WFpart.RAPService.User_RAP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalaryAppendService\SalaryAppend.wsdl" />
+    <None Include="Service References\SalaryAppendService\SalaryAppend.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryAppendService\SalaryAppend1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryAppendService\SalaryAppend2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryAppendService\SalaryAppend3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryAppendService\WFpart.SalaryAppendService.User_SalaryAppend.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalaryInfoSummeryService\SalaryInfoSummery.wsdl" />
+    <None Include="Service References\SalaryInfoSummeryService\SalaryInfoSummery.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryInfoSummeryService\SalaryInfoSummery1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryInfoSummeryService\SalaryInfoSummery2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryInfoSummeryService\WFpart.SalaryInfoSummeryService.RAP_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalaryInfoSummeryService\WFpart.SalaryInfoSummeryService.SalaryAppend_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalaryInfoSummeryService\WFpart.SalaryInfoSummeryService.SalaryInfo_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalaryInfoSummeryService\WFpart.SalaryInfoSummeryService.Salary_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalaryLogService\SalaryLog.wsdl" />
+    <None Include="Service References\SalaryLogService\SalaryLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryLogService\SalaryLog1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryLogService\SalaryLog2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryLogService\SalaryLog3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryLogService\WFpart.SalaryLogService.User_SalaryLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalaryService\Salary.wsdl" />
+    <None Include="Service References\SalaryService\Salary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryService\Salary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryService\Salary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryService\Salary3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalaryService\WFpart.SalaryService.User_Salary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShopService\Shop.wsdl" />
+    <None Include="Service References\ShopService\Shop.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\Shop1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\Shop2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\Shop3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\WFpart.ShopService.Car_Shop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TypeService\Type.wsdl" />
+    <None Include="Service References\TypeService\Type.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TypeService\Type1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TypeService\Type2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TypeService\Type3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TypeService\WFpart.TypeService.Car_Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager.wsdl" />
+    <None Include="Service References\UserManagerService\UserManager.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManager4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\WFpart.UserManagerService.aspnet_UsersEX.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\WFpart.UserManagerService.Shop_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\WFpart.UserManagerService.User_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery.wsdl" />
+    <None Include="Service References\UserSummeryService\UserSummery.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\UserSummery3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserSummeryService\WFpart.UserSummeryService.aspnet_UsersEX.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserSummeryService\WFpart.UserSummeryService.User_ViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VersionService\Version.wsdl" />
+    <None Include="Service References\VersionService\Version.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VersionService\Version1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VersionService\Version2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VersionService\Version3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VersionService\WFpart.VersionService.Car_Version.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkRAPService\WFpart.WorkRAPService.User_WorkRAP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkRAPService\WorkRAP.wsdl" />
+    <None Include="Service References\WorkRAPService\WorkRAP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkRAPService\WorkRAP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkRAPService\WorkRAP2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkRAPService\WorkRAP3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\1536261_194543031_2[1].jpg" />
+    <Content Include="Image\1920x1200qichebizhixiazai_384485_m[1].jpg" />
+    <None Include="Service References\GetCarService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GetCarService\configuration.svcinfo" />
+    <None Include="Service References\GetCarService\configuration91.svcinfo" />
+    <None Include="Service References\GetCarService\GetCar.disco" />
+    <None Include="Service References\WorkRAPService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WorkRAPService\configuration.svcinfo" />
+    <None Include="Service References\WorkRAPService\configuration91.svcinfo" />
+    <None Include="Service References\WorkRAPService\WorkRAP.disco" />
+    <None Include="Service References\SalaryInfoSummeryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SalaryInfoSummeryService\configuration.svcinfo" />
+    <None Include="Service References\SalaryInfoSummeryService\configuration91.svcinfo" />
+    <None Include="Service References\SalaryInfoSummeryService\SalaryInfoSummery.disco" />
+    <None Include="Service References\OrderSummeryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\OrderSummeryService\configuration.svcinfo" />
+    <None Include="Service References\OrderSummeryService\configuration91.svcinfo" />
+    <None Include="Service References\OrderSummeryService\OrderSummery.disco" />
+    <None Include="Service References\CarSummeryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CarSummeryService\configuration.svcinfo" />
+    <None Include="Service References\CarSummeryService\configuration91.svcinfo" />
+    <None Include="Service References\CarSummeryService\CarSummery.disco" />
+    <None Include="Service References\SalaryLogService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SalaryLogService\configuration.svcinfo" />
+    <None Include="Service References\SalaryLogService\configuration91.svcinfo" />
+    <None Include="Service References\SalaryLogService\SalaryLog.disco" />
+    <None Include="Service References\SalaryAppendService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SalaryAppendService\configuration.svcinfo" />
+    <None Include="Service References\SalaryAppendService\configuration91.svcinfo" />
+    <None Include="Service References\SalaryAppendService\SalaryAppend.disco" />
+    <None Include="Service References\SalaryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SalaryService\configuration.svcinfo" />
+    <None Include="Service References\SalaryService\configuration91.svcinfo" />
+    <None Include="Service References\SalaryService\Salary.disco" />
+    <None Include="Service References\RAPService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RAPService\configuration.svcinfo" />
+    <None Include="Service References\RAPService\configuration91.svcinfo" />
+    <None Include="Service References\RAPService\RAP.disco" />
+    <None Include="Service References\VersionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\VersionService\configuration.svcinfo" />
+    <None Include="Service References\VersionService\configuration91.svcinfo" />
+    <None Include="Service References\VersionService\Version.disco" />
+    <None Include="Service References\TypeService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TypeService\configuration.svcinfo" />
+    <None Include="Service References\TypeService\configuration91.svcinfo" />
+    <None Include="Service References\TypeService\Type.disco" />
+    <None Include="Service References\OrderService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\OrderService\configuration.svcinfo" />
+    <None Include="Service References\OrderService\configuration91.svcinfo" />
+    <None Include="Service References\OrderService\Order.disco" />
+    <None Include="Service References\CheckoutService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CheckoutService\configuration.svcinfo" />
+    <None Include="Service References\CheckoutService\configuration91.svcinfo" />
+    <None Include="Service References\CheckoutService\Checkout.disco" />
+    <None Include="Service References\BrandService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BrandService\configuration.svcinfo" />
+    <None Include="Service References\BrandService\configuration91.svcinfo" />
+    <None Include="Service References\BrandService\Brand.disco" />
+    <None Include="Service References\ActionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ActionService\configuration.svcinfo" />
+    <None Include="Service References\ActionService\configuration91.svcinfo" />
+    <None Include="Service References\ActionService\Action.disco" />
+    <None Include="Service References\AccountService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AccountService\configuration.svcinfo" />
+    <None Include="Service References\AccountService\configuration91.svcinfo" />
+    <None Include="Service References\AccountService\Account.disco" />
+    <None Include="Service References\ProvinceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ProvinceService\configuration.svcinfo" />
+    <None Include="Service References\ProvinceService\configuration91.svcinfo" />
+    <None Include="Service References\ProvinceService\Province.disco" />
+    <None Include="Service References\CityService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CityService\configuration.svcinfo" />
+    <None Include="Service References\CityService\configuration91.svcinfo" />
+    <None Include="Service References\CityService\City.disco" />
+    <None Include="Service References\ShopService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ShopService\configuration.svcinfo" />
+    <None Include="Service References\ShopService\configuration91.svcinfo" />
+    <None Include="Service References\ShopService\Shop.disco" />
+    <None Include="Service References\UserManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserManagerService\configuration.svcinfo" />
+    <None Include="Service References\UserManagerService\configuration91.svcinfo" />
+    <None Include="Service References\UserManagerService\UserManager.disco" />
+    <None Include="Service References\UserSummeryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserSummeryService\configuration.svcinfo" />
+    <None Include="Service References\UserSummeryService\configuration91.svcinfo" />
+    <None Include="Service References\UserSummeryService\UserSummery.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AccountService\" />
+    <WCFMetadataStorage Include="Service References\ActionService\" />
+    <WCFMetadataStorage Include="Service References\BrandService\" />
+    <WCFMetadataStorage Include="Service References\CarSummeryService\" />
+    <WCFMetadataStorage Include="Service References\CheckoutService\" />
+    <WCFMetadataStorage Include="Service References\CityService\" />
+    <WCFMetadataStorage Include="Service References\GetCarService\" />
+    <WCFMetadataStorage Include="Service References\OrderService\" />
+    <WCFMetadataStorage Include="Service References\OrderSummeryService\" />
+    <WCFMetadataStorage Include="Service References\ProvinceService\" />
+    <WCFMetadataStorage Include="Service References\RAPService\" />
+    <WCFMetadataStorage Include="Service References\SalaryAppendService\" />
+    <WCFMetadataStorage Include="Service References\SalaryInfoSummeryService\" />
+    <WCFMetadataStorage Include="Service References\SalaryLogService\" />
+    <WCFMetadataStorage Include="Service References\SalaryService\" />
+    <WCFMetadataStorage Include="Service References\ShopService\" />
+    <WCFMetadataStorage Include="Service References\TypeService\" />
+    <WCFMetadataStorage Include="Service References\UserManagerService\" />
+    <WCFMetadataStorage Include="Service References\UserSummeryService\" />
+    <WCFMetadataStorage Include="Service References\VersionService\" />
+    <WCFMetadataStorage Include="Service References\WorkRAPService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

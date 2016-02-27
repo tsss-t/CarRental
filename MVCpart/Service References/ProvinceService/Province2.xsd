@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/CarRental/Province.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Car_Province">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Province_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Province_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Car_City" nillable="true" type="tns:ArrayOfCar_City">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Province" nillable="true" type="tns:Car_Province" />
+  <xs:complexType name="ArrayOfCar_City">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_City" nillable="true" type="tns:Car_City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_City" nillable="true" type="tns:ArrayOfCar_City" />
+  <xs:complexType name="Car_City">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="City_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_Province" type="xs:int" />
+      <xs:element minOccurs="0" name="Car_Shop" nillable="true" type="tns:ArrayOfCar_Shop">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_City" nillable="true" type="tns:Car_City" />
+  <xs:complexType name="ArrayOfCar_Shop">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Shop" nillable="true" type="tns:Car_Shop" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Shop" nillable="true" type="tns:ArrayOfCar_Shop" />
+  <xs:complexType name="Car_Shop">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Shop_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Shop_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_City" type="xs:int" />
+      <xs:element minOccurs="0" name="Shop_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Car_Account" nillable="true" type="tns:ArrayOfCar_Account">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Car_Version" nillable="true" type="tns:ArrayOfCar_Version">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UserInShop" nillable="true" type="tns:ArrayOfUserInShop">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Car_Order" nillable="true" type="tns:ArrayOfCar_Order">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Shop" nillable="true" type="tns:Car_Shop" />
+  <xs:complexType name="ArrayOfCar_Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Account" nillable="true" type="tns:Car_Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Account" nillable="true" type="tns:ArrayOfCar_Account" />
+  <xs:complexType name="Car_Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Account_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Account_User" type="ser:guid" />
+      <xs:element minOccurs="0" name="Account_Shop" type="xs:int" />
+      <xs:element minOccurs="0" name="Account_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Account_Info" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Account" nillable="true" type="tns:Car_Account" />
+  <xs:complexType name="ArrayOfCar_Version">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Version" nillable="true" type="tns:Car_Version" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Version" nillable="true" type="tns:ArrayOfCar_Version" />
+  <xs:complexType name="Car_Version">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Version_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Person" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Type" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Brand" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Shop" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Price_Normal_Rental" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Member_Rental" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Normal_Catch" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Member_Catch" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Over" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Riding" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Over_Riding" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Price_Deposit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_IMG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_BaseKM" type="xs:int" />
+      <xs:element minOccurs="0" name="Car_Order" nillable="true" type="tns:ArrayOfCar_Order">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Version" nillable="true" type="tns:Car_Version" />
+  <xs:complexType name="ArrayOfCar_Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Order" nillable="true" type="tns:Car_Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Order" nillable="true" type="tns:ArrayOfCar_Order" />
+  <xs:complexType name="Car_Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Order_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_User" type="ser:guid" />
+      <xs:element minOccurs="0" name="Order_Shop" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Version" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_RentalType" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Start_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order_End_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order_Action" type="xs:int" />
+      <xs:element minOccurs="0" name="Order_Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order_IsCatch" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Order_DepositPay" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Car_Checkout" nillable="true" type="tns:ArrayOfCar_Checkout">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Order" nillable="true" type="tns:Car_Order" />
+  <xs:complexType name="ArrayOfCar_Checkout">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Checkout" nillable="true" type="tns:Car_Checkout" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Checkout" nillable="true" type="tns:ArrayOfCar_Checkout" />
+  <xs:complexType name="Car_Checkout">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checkout_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Order" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_User" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Checkout_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checkout_KM" type="xs:int" />
+      <xs:element minOccurs="0" name="Checkout_Mark" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car_Checkout" nillable="true" type="tns:Car_Checkout" />
+  <xs:complexType name="ArrayOfUserInShop">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserInShop" nillable="true" type="tns:UserInShop" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserInShop" nillable="true" type="tns:ArrayOfUserInShop" />
+  <xs:complexType name="UserInShop">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ShopID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInShop" nillable="true" type="tns:UserInShop" />
+  <xs:complexType name="ArrayOfCar_Province">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car_Province" nillable="true" type="tns:Car_Province" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar_Province" nillable="true" type="tns:ArrayOfCar_Province" />
+</xs:schema>

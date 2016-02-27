@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 24.375, 14.75" name="CarRentalDB">
+  <DataContextMoniker Name="/CarRentalDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="78600382-5f7e-49ce-82dd-8da3b7891d54" absoluteBounds="22.125, 7, 2, 4.8188806152343764">
+      <DataClassMoniker Name="/CarRentalDBDataContext/aspnet_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8800bc2d-9b70-40c5-8a74-345de667efb3" absoluteBounds="22.14, 7.4600000000000009, 1.9700000000000002, 4.258880615234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3084aab9-f989-4226-9d4d-9dc7f537e763" absoluteBounds="13.5, 10.5, 2, 1.7625655110677077">
+      <DataClassMoniker Name="/CarRentalDBDataContext/aspnet_Roles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3a0c07a-a6b9-4a47-98f6-21942bd482ec" absoluteBounds="13.515, 10.96, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" absoluteBounds="12.125, 7.625, 2, 2.1446048990885416">
+      <DataClassMoniker Name="/CarRentalDBDataContext/aspnet_Users" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8ab09a3-2247-4024-bf1e-8f12696c331a" absoluteBounds="12.14, 8.085, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c530e69-bc8a-4e61-9cff-a7da602c31c9" absoluteBounds="16.25, 9.75, 2, 1.1895064290364585">
+      <DataClassMoniker Name="/CarRentalDBDataContext/aspnet_UsersInRoles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a35716ae-793a-4aff-ade7-175029257c4a" absoluteBounds="16.265, 10.21, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.125 : 8.82306743143763); (22.125 : 8.82306743143763)]" fixedFrom="Caller" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="78600382-5f7e-49ce-82dd-8da3b7891d54" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5 : 10.7197532145182); (16.25 : 10.7197532145182)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Roles/aspnet_Roles_aspnet_UsersInRoles" />
+      <nodes>
+        <classShapeMoniker Id="3084aab9-f989-4226-9d4d-9dc7f537e763" />
+        <classShapeMoniker Id="3c530e69-bc8a-4e61-9cff-a7da602c31c9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.125 : 9.31778571571881); (17.96875 : 9.31778571571881); (17.96875 : 9.75)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_aspnet_UsersInRoles" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="3c530e69-bc8a-4e61-9cff-a7da602c31c9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6f510e4e-cf14-425b-b5b5-e4d895b33e5b" absoluteBounds="9.125, 3.875, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Brand" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b9f338d-2fc8-431b-9c1a-1021eb3edd30" absoluteBounds="9.14, 4.3350000000000009, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d618bc5-d22c-4817-9b7e-93adfa7e1684" absoluteBounds="9.125, 2.25, 2, 1.3805261230468755">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Type" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8598dc2-6bdf-4600-9a90-c1fedad495fc" absoluteBounds="9.14, 2.71, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a61bf28-1ea2-45ec-9077-db5b2d26c9f3" absoluteBounds="19, 7, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/CarRentalDBDataContext/User_SalaryLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="676f178f-d95e-4617-9b49-aadc54aea438" absoluteBounds="19.015, 7.4600000000000009, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.125 : 8.53180616259276); (19 : 8.53180616259276)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_User_SalaryLog" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="0a61bf28-1ea2-45ec-9077-db5b2d26c9f3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c49e7f6e-edf6-4696-be6f-eb29e52fecd6" absoluteBounds="5.375, 5.875, 2, 1.3805261230468751">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Error" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d56b8030-dd1e-4005-93ed-bda0d465d063" absoluteBounds="5.3900000000000006, 6.3350000000000009, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddcae4b8-ac5b-4028-ad60-30e92141d4e1" absoluteBounds="9.125, 7.375, 2, 1.7625655110677085">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Shop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bcdd2b7-bba0-49b5-9665-5737df81cd2e" absoluteBounds="9.14, 7.835, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="708cbe75-9dfb-4263-ae0c-e45d34ecf9ed" absoluteBounds="3, 7.375, 2, 1.1895064290364594">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Province" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01199ba0-e8e2-4746-999d-fcba676e7a1c" absoluteBounds="3.0150000000000006, 7.8350000000000009, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7384d404-b44c-4ed3-956b-034bedf430e9" absoluteBounds="5.375, 7.375, 2, 1.3805261230468746">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_City" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b73804d-b836-465e-888c-d47e0855debf" absoluteBounds="5.39, 7.835, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.375 : 8.06526306152344); (9.125 : 8.06526306152344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_City/Car_City_Car_Shop" />
+      <nodes>
+        <classShapeMoniker Id="7384d404-b44c-4ed3-956b-034bedf430e9" />
+        <classShapeMoniker Id="ddcae4b8-ac5b-4028-ad60-30e92141d4e1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 7.96975321451823); (5.375 : 7.96975321451823)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Province/Car_Province_Car_City" />
+      <nodes>
+        <classShapeMoniker Id="708cbe75-9dfb-4263-ae0c-e45d34ecf9ed" />
+        <classShapeMoniker Id="7384d404-b44c-4ed3-956b-034bedf430e9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="55221cd2-e283-4a30-8fa0-1fcfbbc7a16b" absoluteBounds="19, 5.125, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/CarRentalDBDataContext/User_WorkRAP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28093e39-99db-4b33-9a41-bb63b7ecdf8d" absoluteBounds="19.015, 5.585, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.125 : 8.36706650812823); (18.625 : 8.36706650812823); (18.625 : 6.15258232246565); (19 : 6.15258232246565)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_User_WorkRAP" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="55221cd2-e283-4a30-8fa0-1fcfbbc7a16b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9759887b-b1a8-402f-bfd2-1c93a509e18c" absoluteBounds="15.625, 4.75, 2, 1.3805261230468751">
+      <DataClassMoniker Name="/CarRentalDBDataContext/User_RAP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0afdc494-dab7-4578-bf10-ac6a46417e52" absoluteBounds="15.64, 5.21, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.625 : 5.62776306152344); (19 : 5.62776306152344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/User_RAP/User_RAP_User_WorkRAP" />
+      <nodes>
+        <classShapeMoniker Id="9759887b-b1a8-402f-bfd2-1c93a509e18c" />
+        <classShapeMoniker Id="55221cd2-e283-4a30-8fa0-1fcfbbc7a16b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="318392e9-5e01-4704-84be-462ceccd329c" absoluteBounds="19, 11, 2, 1.3805261230468751">
+      <DataClassMoniker Name="/CarRentalDBDataContext/User_Salary" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3b58eec-ad59-483a-8208-d82f37d71753" absoluteBounds="19.015, 11.46, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.5 : 11.6312827555339); (19 : 11.6312827555339)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Roles/aspnet_Roles_User_Salary" />
+      <nodes>
+        <classShapeMoniker Id="3084aab9-f989-4226-9d4d-9dc7f537e763" />
+        <classShapeMoniker Id="318392e9-5e01-4704-84be-462ceccd329c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6787c6bc-05bf-4b1a-9b49-95963197e7d9" absoluteBounds="15.875, 12.5, 2, 1.9535852050781251">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d13646c5-01e0-4602-845a-4074ec6324ea" absoluteBounds="15.89, 12.96, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.9649416028032 : 9.76960489908854); (12.9649416028032 : 13.1409460088061); (15.875 : 13.1409460088061)]" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_Car_Account" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="6787c6bc-05bf-4b1a-9b49-95963197e7d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.59375 : 9.13756551106771); (9.59375 : 14.1347652749195); (15.875 : 14.1347652749195)]" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Shop/Car_Shop_Car_Account" />
+      <nodes>
+        <classShapeMoniker Id="ddcae4b8-ac5b-4028-ad60-30e92141d4e1" />
+        <classShapeMoniker Id="6787c6bc-05bf-4b1a-9b49-95963197e7d9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4552cd26-29e6-433e-91c5-dd865deb00e0" absoluteBounds="15.625, 1.875, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Action" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c09b3d0a-c3ff-4605-989d-1db99581e0eb" absoluteBounds="15.64, 2.335, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="379141ba-1cb4-4263-b500-0da6785e4173" absoluteBounds="12.125, 0.75, 2, 1.3805261230468751">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_RentalType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f85b3ed9-ef3f-4026-98c5-12e965bc7594" absoluteBounds="12.14, 1.21, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c3149af-39a5-41f8-ab88-fc50a152f96e" absoluteBounds="3, 0.75, 2, 6.5380578613281237">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_ViewModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0aa88388-8800-4b18-8d0b-bf97c6152912" absoluteBounds="3.015, 1.21, 1.9700000000000002, 5.978057861328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4343f67d-a6f1-404f-824f-483090b86edd" absoluteBounds="12.125, 2.625, 2, 4.2458215332031246">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Version" />
+      <nestedChildShapes>
+        <elementListCompartment Id="272c97fb-bc50-48fa-8c28-5fad46ac6708" absoluteBounds="12.14, 3.085, 1.9700000000000002, 3.685821533203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.125 : 4.66077290852865); (12.125 : 4.66077290852865)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Brand/Car_Brand_Car_Version" />
+      <nodes>
+        <classShapeMoniker Id="6f510e4e-cf14-425b-b5b5-e4d895b33e5b" />
+        <classShapeMoniker Id="4343f67d-a6f1-404f-824f-483090b86edd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.0698863622762 : 7.375); (10.0698863622762 : 5.719782748061); (12.125 : 5.719782748061)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Shop/Car_Shop_Car_Version" />
+      <nodes>
+        <classShapeMoniker Id="ddcae4b8-ac5b-4028-ad60-30e92141d4e1" />
+        <classShapeMoniker Id="4343f67d-a6f1-404f-824f-483090b86edd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 3.12776306152344); (12.125 : 3.12776306152344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Type/Car_Type_Car_Version" />
+      <nodes>
+        <classShapeMoniker Id="2d618bc5-d22c-4817-9b7e-93adfa7e1684" />
+        <classShapeMoniker Id="4343f67d-a6f1-404f-824f-483090b86edd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="514802b0-3785-44e5-bd0c-2a915664d254" absoluteBounds="22.125, 3, 2, 1.9535852050781251">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Checkout" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bfe5cf6e-d82d-4a69-b40e-cc0e4021cbdf" absoluteBounds="22.14, 3.46, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.125 : 7.625); (14.125 : 7.58105719600907); (15.1927083333333 : 7.58105719600907); (15.1927083333333 : 4.58273472626355); (22.125 : 4.58273472626355)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_Car_Checkout" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="514802b0-3785-44e5-bd0c-2a915664d254" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="95545a72-63dd-4b34-b970-589ab7ec25c8" absoluteBounds="5.375, 12.375, 2, 2.1446048990885416">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Salary_ViewModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="afbdcb9f-6ffc-408b-b37a-f9a2b4fa05e5" absoluteBounds="5.3900000000000006, 12.835, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6dcac620-2119-487e-82f1-c72034ae20e9" absoluteBounds="15.625, 6.25, 2, 1.9535852050781251">
+      <DataClassMoniker Name="/CarRentalDBDataContext/aspnet_UsersEX" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee7e40d5-8029-4d03-983b-0cbb5145ce9b" absoluteBounds="15.64, 6.71, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.125 : 7.87772038241446); (15.625 : 7.87772038241446)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_aspnet_UsersEX" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="6dcac620-2119-487e-82f1-c72034ae20e9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="39dd8089-d185-4c1a-ac83-941144f3ce73" absoluteBounds="3, 8.875, 2, 2.9086836751302081">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Shop_ViewModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c206a4e-32e2-41a8-a89b-f6d6a1332b11" absoluteBounds="3.0150000000000006, 9.335, 1.9700000000000002, 2.348683675130208" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b177ae9c-49fb-4873-a975-6e8433155ff2" absoluteBounds="10.125, 10.125, 2, 1.1895064290364583">
+      <DataClassMoniker Name="/CarRentalDBDataContext/UserInShop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f33d6200-2b2d-4e81-a688-4479022361f6" absoluteBounds="10.14, 10.585, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.6462069154473 : 9.76960489908854); (12.6462069154473 : 10.7197532145182); (12.125 : 10.7197532145182)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_UserInShop" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="b177ae9c-49fb-4873-a975-6e8433155ff2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.625 : 9.13756551106771); (10.625 : 10.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Shop/Car_Shop_UserInShop" />
+      <nodes>
+        <classShapeMoniker Id="ddcae4b8-ac5b-4028-ad60-30e92141d4e1" />
+        <classShapeMoniker Id="b177ae9c-49fb-4873-a975-6e8433155ff2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="da613e84-9aad-4518-995f-0d17c20e3b11" absoluteBounds="0.625, 0.75, 2, 13.796806233723958">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Order_ViewModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7a9b60a-651a-4b09-b02f-3d5cb8909f0d" absoluteBounds="0.64, 1.2100000000000009, 1.9700000000000002, 13.236806233723957" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8343f192-90b0-437e-9a70-0a364d423bbf" absoluteBounds="19, 1.125, 2, 3.2907230631510416">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e0945ce-f133-4117-b689-1109dbbe4ed0" absoluteBounds="19.015, 1.585, 1.9700000000000002, 2.7307230631510415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21 : 3.70786153157552); (22.125 : 3.70786153157552)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Order/Car_Order_Car_Checkout" />
+      <nodes>
+        <classShapeMoniker Id="8343f192-90b0-437e-9a70-0a364d423bbf" />
+        <classShapeMoniker Id="514802b0-3785-44e5-bd0c-2a915664d254" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.125 : 7.625); (14.5 : 7.25); (14.9752783018804 : 7.25); (14.9752783018804 : 4.18118674320866); (19 : 4.18118674320866)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_Car_Order" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="8343f192-90b0-437e-9a70-0a364d423bbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.625 : 2.26018076578776); (19 : 2.26018076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Action/Car_Action_Car_Order" />
+      <nodes>
+        <classShapeMoniker Id="4552cd26-29e6-433e-91c5-dd865deb00e0" />
+        <classShapeMoniker Id="8343f192-90b0-437e-9a70-0a364d423bbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.125 : 1.46875); (19 : 1.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_RentalType/Car_RentalType_Car_Order" />
+      <nodes>
+        <classShapeMoniker Id="379141ba-1cb4-4263-b500-0da6785e4173" />
+        <classShapeMoniker Id="8343f192-90b0-437e-9a70-0a364d423bbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 8.39312633445457); (11.5 : 8.39312633445457); (11.5 : 7.12082153320312); (14.7071659312446 : 7.12082153320312); (14.7071659312446 : 3.83879286304579); (19 : 3.83879286304579)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Shop/Car_Shop_Car_Order" />
+      <nodes>
+        <classShapeMoniker Id="ddcae4b8-ac5b-4028-ad60-30e92141d4e1" />
+        <classShapeMoniker Id="8343f192-90b0-437e-9a70-0a364d423bbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.125 : 3.57606720135181); (19 : 3.57606720135181)]" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Version/Car_Version_Car_Order" />
+      <nodes>
+        <classShapeMoniker Id="4343f67d-a6f1-404f-824f-483090b86edd" />
+        <classShapeMoniker Id="8343f192-90b0-437e-9a70-0a364d423bbf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fc9be29a-375e-4da0-a796-192e263771b2" absoluteBounds="3, 12, 2, 2.5266442871093751">
+      <DataClassMoniker Name="/CarRentalDBDataContext/RAP_ViewModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31d9b4c5-a630-4b65-8ae1-a5907e0aecd1" absoluteBounds="3.015, 12.46, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb587242-d87a-4277-bb40-bcb1ef686633" absoluteBounds="5.375, 9.75, 2, 2.3356245930989585">
+      <DataClassMoniker Name="/CarRentalDBDataContext/SalaryAppend_ViewModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ab9cc1d-9945-45d8-96f3-1c5ba7b03697" absoluteBounds="5.3900000000000006, 10.21, 1.9700000000000002, 1.7756245930989585" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62018f3a-fa58-4269-b3fb-1035dd8378a6" absoluteBounds="19, 9, 2, 1.7625655110677081">
+      <DataClassMoniker Name="/CarRentalDBDataContext/User_SalaryAppend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a06ccf6-7b6a-4b27-9d93-d0b949760fdd" absoluteBounds="19.015, 9.46, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.125 : 9.0170825597771); (19 : 9.0170825597771)]" fixedFrom="Caller" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDBDataContext/aspnet_Users/aspnet_Users_User_SalaryAppend" />
+      <nodes>
+        <classShapeMoniker Id="6333a14f-437a-4091-a4bf-b2b46bda9fd4" />
+        <classShapeMoniker Id="62018f3a-fa58-4269-b3fb-1035dd8378a6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="412f9632-ae05-4203-b3ac-341e231701c1" absoluteBounds="5.375, 0.75, 2, 5.0099003092447907">
+      <DataClassMoniker Name="/CarRentalDBDataContext/SalaryInfo_ViewModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2e7a392-fdf6-4e46-a6f3-cb0b5f697fd1" absoluteBounds="5.3900000000000006, 1.2100000000000009, 1.9700000000000002, 4.4499003092447911" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63ffb1ba-c1d0-4342-8fd7-41bc9a08b054" absoluteBounds="22.125, 0.5, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/CarRentalDBDataContext/Car_Get" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0c3fea6-503d-4167-9d1f-72e44ae03820" absoluteBounds="22.14, 0.96, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21 : 1.59827290852865); (22.125 : 1.59827290852865)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDBDataContext/Car_Order/Car_Order_Car_Get" />
+      <nodes>
+        <classShapeMoniker Id="8343f192-90b0-437e-9a70-0a364d423bbf" />
+        <classShapeMoniker Id="63ffb1ba-c1d0-4342-8fd7-41bc9a08b054" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

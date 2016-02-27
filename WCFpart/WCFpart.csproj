@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B20CF4E-79A8-46CF-A652-C7C82AD3F904}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WCFpart</RootNamespace>
+    <AssemblyName>WCFpart</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SOA\Function\CarRental\GetCar.svc" />
+    <Content Include="SOA\Function\CarRental\Action.svc" />
+    <Content Include="SOA\Function\CarRental\Checkout.svc" />
+    <Content Include="SOA\Function\Synthesize\SalaryInfoSummery.svc" />
+    <Content Include="SOA\Function\Synthesize\CarSummery.svc" />
+    <Content Include="SOA\Function\Synthesize\OrderSummery.svc" />
+    <Content Include="SOA\Function\Personnel\RAP.svc" />
+    <Content Include="SOA\Function\Personnel\SalaryAppend.svc" />
+    <Content Include="SOA\Function\Personnel\Salary.svc" />
+    <Content Include="SOA\Function\CarRental\Account.svc" />
+    <Content Include="SOA\Function\CarRental\Order.svc" />
+    <Content Include="SOA\Function\CarRental\Version.svc" />
+    <Content Include="SOA\Function\CarRental\Brand.svc" />
+    <Content Include="SOA\Function\CarRental\Type.svc" />
+    <Content Include="SOA\Function\CarRental\City.svc" />
+    <Content Include="SOA\Function\CarRental\Shop.svc" />
+    <Content Include="SOA\Function\CarRental\WCFtest.svc" />
+    <Content Include="SOA\Function\CarRental\Province.svc" />
+    <Content Include="SOA\Function\Personnel\WorkRAP.svc" />
+    <Content Include="SOA\Function\Personnel\SalaryLog.svc" />
+    <Content Include="SOA\Function\Synthesize\UserSummery.svc" />
+    <Content Include="SOA\Function\Synthesize\UserManager.svc" />
+    <Content Include="Test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SOA\Function\CarRental\GetCar.svc.cs">
+      <DependentUpon>GetCar.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\CarRental\IGetCar.cs" />
+    <Compile Include="SOA\EndPoint\Personnel\IRAP.cs" />
+    <Compile Include="SOA\Function\CarRental\Action.svc.cs">
+      <DependentUpon>Action.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\CarRental\IAction.cs" />
+    <Compile Include="SOA\Function\CarRental\Checkout.svc.cs">
+      <DependentUpon>Checkout.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\CarRental\ICheckout.cs" />
+    <Compile Include="SOA\EndPoint\Synthesize\IOrderSummery.cs" />
+    <Compile Include="SOA\EndPoint\Synthesize\ISalaryInfoSummery.cs" />
+    <Compile Include="SOA\EndPoint\Synthesize\IUserSummery.cs" />
+    <Compile Include="SOA\EndPoint\Synthesize\IUserManager.cs" />
+    <Compile Include="SOA\Function\Synthesize\SalaryInfoSummery.svc.cs">
+      <DependentUpon>SalaryInfoSummery.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\Function\Synthesize\CarSummery.svc.cs">
+      <DependentUpon>CarSummery.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\Synthesize\ICarSummery.cs" />
+    <Compile Include="SOA\Function\Synthesize\OrderSummery.svc.cs">
+      <DependentUpon>OrderSummery.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\Function\Personnel\RAP.svc.cs">
+      <DependentUpon>RAP.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\Personnel\ISalaryAppend.cs" />
+    <Compile Include="SOA\Function\Personnel\SalaryAppend.svc.cs">
+      <DependentUpon>SalaryAppend.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\Personnel\ISalary.cs" />
+    <Compile Include="SOA\Function\Personnel\Salary.svc.cs">
+      <DependentUpon>Salary.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\Function\CarRental\Account.svc.cs">
+      <DependentUpon>Account.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\CarRental\IAccount.cs" />
+    <Compile Include="SOA\EndPoint\CarRental\IOrder.cs" />
+    <Compile Include="SOA\Function\CarRental\Order.svc.cs">
+      <DependentUpon>Order.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\CarRental\IVersion.cs" />
+    <Compile Include="SOA\Function\CarRental\Version.svc.cs">
+      <DependentUpon>Version.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\Function\CarRental\Brand.svc.cs">
+      <DependentUpon>Brand.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\CarRental\IType.cs" />
+    <Compile Include="SOA\Function\CarRental\Type.svc.cs">
+      <DependentUpon>Type.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DB_Helper.cs" />
+    <Compile Include="SOA\EndPoint\CarRental\IProvince.cs" />
+    <Compile Include="SOA\Function\CarRental\City.svc.cs">
+      <DependentUpon>City.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\CarRental\ICity.cs" />
+    <Compile Include="SOA\EndPoint\CarRental\IShop.cs" />
+    <Compile Include="SOA\Function\CarRental\Province.svc.cs">
+      <DependentUpon>Province.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\CarRental\IBrand.cs" />
+    <Compile Include="SOA\EndPoint\CarRental\IWCFtest.cs" />
+    <Compile Include="Models\CarRentalDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarRentalDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOA\Function\CarRental\Shop.svc.cs">
+      <DependentUpon>Shop.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\Function\CarRental\WCFtest.svc.cs">
+      <DependentUpon>WCFtest.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\Personnel\IWorkRAP.cs" />
+    <Compile Include="SOA\Function\Personnel\WorkRAP.svc.cs">
+      <DependentUpon>WorkRAP.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\EndPoint\Personnel\ISalaryLog.cs" />
+    <Compile Include="SOA\Function\Personnel\SalaryLog.svc.cs">
+      <DependentUpon>SalaryLog.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\Function\Synthesize\UserSummery.svc.cs">
+      <DependentUpon>UserSummery.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SOA\Function\Synthesize\UserManager.svc.cs">
+      <DependentUpon>UserManager.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="REST\EndPoint\" />
+    <Folder Include="REST\Function\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\CarRentalDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CarRentalDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\CarRentalDB.dbml.layout">
+      <DependentUpon>CarRentalDB.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>20720</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <EnableWcfTestClientForSVCDefaultValue>True</EnableWcfTestClientForSVCDefaultValue>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

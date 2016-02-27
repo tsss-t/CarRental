@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFpart" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFpart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kazenotsubasa/SOA/Function/Synthesize/SalaryInfoSummery.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfSalaryInfo_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalaryInfo_ViewModel" nillable="true" type="tns:SalaryInfo_ViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalaryInfo_ViewModel" nillable="true" type="tns:ArrayOfSalaryInfo_ViewModel" />
+  <xs:complexType name="SalaryInfo_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoweredUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Validation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_RealName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Adress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salary_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Salary_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Salary_Role" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoweredRoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Shop_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shop_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RAP_Price" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalaryAppend_Price" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalaryLog_Mark" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TatalPrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalaryLog_ID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalaryInfo_ViewModel" nillable="true" type="tns:SalaryInfo_ViewModel" />
+  <xs:complexType name="ArrayOfSalary_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Salary_ViewModel" nillable="true" type="tns:Salary_ViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalary_ViewModel" nillable="true" type="tns:ArrayOfSalary_ViewModel" />
+  <xs:complexType name="Salary_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoweredUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salary_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Salary_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Salary_Role" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoweredRoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Salary_ViewModel" nillable="true" type="tns:Salary_ViewModel" />
+  <xs:complexType name="ArrayOfRAP_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RAP_ViewModel" nillable="true" type="tns:RAP_ViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRAP_ViewModel" nillable="true" type="tns:ArrayOfRAP_ViewModel" />
+  <xs:complexType name="RAP_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RAP_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RAP_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WorkRAP_User" type="ser:guid" />
+      <xs:element minOccurs="0" name="WorkRAP_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoweredUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileAlias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkRAP_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="RAP_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RAP_ViewModel" nillable="true" type="tns:RAP_ViewModel" />
+  <xs:complexType name="ArrayOfSalaryAppend_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalaryAppend_ViewModel" nillable="true" type="tns:SalaryAppend_ViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalaryAppend_ViewModel" nillable="true" type="tns:ArrayOfSalaryAppend_ViewModel" />
+  <xs:complexType name="SalaryAppend_ViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SalaryAppend_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="SalaryAppend_User" type="ser:guid" />
+      <xs:element minOccurs="0" name="SalaryAppend_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalaryAppend_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalaryAppend_Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoweredUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileAlias" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalaryAppend_ViewModel" nillable="true" type="tns:SalaryAppend_ViewModel" />
+</xs:schema>
